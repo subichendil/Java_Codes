@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class hashMap {
 	public static void main(String[]args)
@@ -19,7 +20,7 @@ public class hashMap {
 		for(Integer key:map.keySet())
 		{
 			System.out.println(key);
-		}***/
+		}
 		
 
 		for(String val: map.values())
@@ -27,6 +28,17 @@ public class hashMap {
 			System.out.println(val);
 		}
 		
+		for(Map.Entry<Integer, String>e: map.entrySet()) {
+			System.out.println(e.getKey()+ " "+ e.getValue());
+		}
+		map.replace(3, "c");
+		System.out.println(map);***/
+		
+		map.putIfAbsent(4, "SQL");
+		map.clear();
+		map.put(1, "A");
+		map.put(2, "B");
+		System.out.println(map);
 	}
 
 }
